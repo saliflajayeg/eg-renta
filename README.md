@@ -1,6 +1,8 @@
-# EG RENTA 🇬🇶
+# Espacio de EG 🇬🇶
 
-**La plataforma de alquiler de Guinea Ecuatorial.** Casas, apartamentos y oficinas en alquiler en Malabo, Bata, Sipopo, Mongomo y todo el país. Los inquilinos buscan y filtran propiedades; los propietarios y agentes inmobiliarios publican sus anuncios gratis.
+> *Encuentra tu espacio en Guinea.*
+
+**La plataforma de alquiler de Guinea Ecuatorial.** Casas, apartamentos, locales y oficinas en alquiler en Malabo, Bata, Sipopo, Mongomo y todo el país. Los inquilinos buscan y filtran propiedades; los propietarios y agentes inmobiliarios publican sus anuncios gratis.
 
 > Servicio pensado y disponible únicamente para Guinea Ecuatorial.
 

@@ -1,6 +1,6 @@
 /* ============================================================
-   EG RENTA — app.js
-   Plataforma de alquiler para Guinea Ecuatorial
+   Espacio de EG — app.js
+   Encuentra tu espacio en Guinea · Plataforma de alquiler para Guinea Ecuatorial
    ============================================================ */
 
 /* ---------- Utilidades ---------- */
@@ -20,7 +20,7 @@ function fallbackImg(tipo){
     + "<rect x='285' y='120' width='120' height='200' rx='6'/>"
     + "<rect x='420' y='190' width='110' height='130' rx='6'/>"
     + "<path d='M120 170 l75 -55 75 55 z'/><path d='M285 120 l60 -45 60 45 z'/></g>"
-    + "<text x='320' y='372' font-family='Segoe UI,Arial' font-size='22' fill='#12261b' text-anchor='middle' opacity='.6'>EG RENTA · Guinea Ecuatorial</text>"
+    + "<text x='320' y='372' font-family='Segoe UI,Arial' font-size='22' fill='#12261b' text-anchor='middle' opacity='.6'>Espacio de EG · Guinea Ecuatorial</text>"
     + "</svg>";
   return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
 }
