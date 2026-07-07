@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EG RENTA — Alquiler premium de casas y oficinas en Guinea Ecuatorial</title>
+<meta name="description" content="EG RENTA: la plataforma para alquilar casas, apartamentos y oficinas en Guinea Ecuatorial. Malabo, Bata, Sipopo, Mongomo y más." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://images.unsplash.com" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="EG RENTA inicio">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="#0072CE"/>
+          <path d="M6 12 h28 v5 h-28z" fill="#009739"/>
+          <path d="M6 17 h28 v6 h-28z" fill="#ffffff"/>
+          <path d="M6 23 h28 v5 h-28z" fill="#EF3340"/>
+          <path d="M20 8 l2.3 4.7 5.2.7-3.8 3.6.9 5.1-4.6-2.4-4.6 2.4.9-5.1-3.8-3.6 5.2-.7z" fill="#F9D616"/>
+        </svg>
+      </span>
+      <span class="brand-name">EG&nbsp;<strong>RENTA</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Principal">
+      <a href="#buscar">Buscar</a>
+      <a href="#zonas">Zonas</a>
+      <a href="#listings">Propiedades</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#publicar" class="nav-cta">Publicar propiedad</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="buscar">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="hero-eyebrow"><span class="pulse"></span> Solo disponible en Guinea Ecuatorial 🇬🇶</p>
+    <h1>Encuentra tu próximo <span class="grad">hogar u oficina</span> en Guinea Ecuatorial</h1>
+    <p class="hero-sub">Casas, apartamentos y oficinas en alquiler en Malabo, Bata, Sipopo, Mongomo y más. Publica gratis si eres propietario o agente inmobiliario.</p>
+
+    <form class="search-card" id="searchForm" aria-label="Buscar propiedades">
+      <div class="field">
+        <label for="fZona">Zona / Ciudad</label>
+        <select id="fZona">
+          <option value="">Todas las zonas</option>
+          <option>Malabo</option>
+          <option>Bata</option>
+          <option>Sipopo</option>
+          <option>Mongomo</option>
+          <option>Ebebiyín</option>
+          <option>Luba</option>
+          <option>Ciudad de la Paz (Oyala)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fTipo">Tipo</label>
+        <select id="fTipo">
+          <option value="">Cualquiera</option>
+          <option value="apartamento">Apartamento</option>
+          <option value="casa">Casa</option>
+          <option value="oficina">Oficina</option>
+          <option value="local">Local comercial</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fHab">Habitaciones</label>
+        <select id="fHab">
+          <option value="">Cualquiera</option>
+          <option value="0">Estudio / Oficina</option>
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fPrecio">Precio máx. (FCFA/mes)</label>
+        <select id="fPrecio">
+          <option value="">Sin límite</option>
+          <option value="250000">250.000</option>
+          <option value="500000">500.000</option>
+          <option value="1000000">1.000.000</option>
+          <option value="2000000">2.000.000</option>
+          <option value="5000000">5.000.000</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-search">🔎 Buscar</button>
+    </form>
+
+    <div class="hero-stats">
+      <span><strong id="statCount">0</strong> propiedades</span>
+      <span class="dot"></span>
+      <span><strong>7</strong> ciudades</span>
+      <span class="dot"></span>
+      <span><strong>100%</strong> local 🇬🇶</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZONAS ICÓNICAS ============ -->
+<section class="zonas" id="zonas">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Explora por ubicación</p>
+      <h2 class="section-title">Zonas icónicas de Guinea Ecuatorial</h2>
+      <p class="section-sub">Descubre propiedades en los lugares más emblemáticos del país.</p>
+    </div>
+    <div class="zonas-grid" id="zonasGrid"></div>
+  </div>
+</section>
+
+<!-- ============ LISTINGS ============ -->
+<section class="listings-section" id="listings">
+  <div class="container">
+    <div class="listings-head">
+      <div class="section-head">
+        <p class="kicker">Disponibles ahora</p>
+        <h2 class="section-title">Propiedades en alquiler</h2>
+        <p class="section-sub" id="resultsInfo">Mostrando todas las propiedades</p>
+      </div>
+      <div class="listings-controls">
+        <label for="sortBy" class="sr-only">Ordenar</label>
+        <select id="sortBy">
+          <option value="recent">Más recientes</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+        </select>
+        <button class="btn-clear" id="clearFilters">Limpiar filtros</button>
+      </div>
+    </div>
+    <div class="listings-grid" id="listingsGrid"></div>
+    <p class="empty-state" id="emptyState" hidden>No hay propiedades que coincidan con tu búsqueda. Prueba a limpiar los filtros.</p>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section class="how" id="como">
+  <div class="container">
+    <div class="section-head center">
+      <p class="kicker">Sencillo y gratis</p>
+      <h2 class="section-title">Cómo funciona EG RENTA</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <h3>Busca</h3>
+        <p>Filtra por ciudad, tipo de propiedad, habitaciones y presupuesto en FCFA hasta encontrar lo que buscas.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <h3>Contacta</h3>
+        <p>Habla directamente con el propietario o agente por teléfono o WhatsApp, sin intermediarios.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <h3>Publica</h3>
+        <p>¿Tienes una propiedad? Publícala gratis en minutos y llega a inquilinos de todo el país.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICAR ============ -->
+<section class="publish" id="publicar">
+  <div class="container publish-inner">
+    <div class="publish-copy">
+      <p class="kicker light">Para propietarios y agentes</p>
+      <h2 class="section-title">Publica tu propiedad y llega a toda Guinea Ecuatorial</h2>
+      <p>Sube tu apartamento, casa u oficina a EG RENTA y conecta con inquilinos en Malabo, Bata y todo el país. Rápido y gratuito.</p>
+      <ul class="publish-benefits">
+        <li>✅ Publicación gratuita e inmediata</li>
+        <li>✅ Contacto directo por teléfono o WhatsApp</li>
+        <li>✅ Visibilidad en las principales ciudades del país</li>
+      </ul>
+    </div>
+    <form class="publish-form" id="publishForm">
+      <h3>Publica tu propiedad</h3>
+      <div class="row">
+        <div class="field">
+          <label for="pTitulo">Título del anuncio *</label>
+          <input id="pTitulo" required placeholder="Ej: Apartamento 2 hab. en Ela Nguema" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pTipo">Tipo *</label>
+          <select id="pTipo" required>
+            <option value="apartamento">Apartamento</option>
+            <option value="casa">Casa</option>
+            <option value="oficina">Oficina</option>
+            <option value="local">Local comercial</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pZona">Ciudad *</label>
+          <select id="pZona" required>
+            <option>Malabo</option>
+            <option>Bata</option>
+            <option>Sipopo</option>
+            <option>Mongomo</option>
+            <option>Ebebiyín</option>
+            <option>Luba</option>
+            <option>Ciudad de la Paz (Oyala)</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pBarrio">Barrio / referencia</label>
+          <input id="pBarrio" placeholder="Ej: Los Ángeles, cerca de la catedral" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pHab">Habitaciones</label>
+          <input id="pHab" type="number" min="0" value="1" />
+        </div>
+        <div class="field">
+          <label for="pBanos">Baños</label>
+          <input id="pBanos" type="number" min="0" value="1" />
+        </div>
+        <div class="field">
+          <label for="pPrecio">Precio (FCFA/mes) *</label>
+          <input id="pPrecio" type="number" min="0" required placeholder="450000" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pTel">Teléfono / WhatsApp *</label>
+          <input id="pTel" required placeholder="+240 222 000 000" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pDesc">Descripción</label>
+          <textarea id="pDesc" rows="3" placeholder="Describe la propiedad, servicios incluidos, etc."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-search full">Publicar anuncio</button>
+      <p class="form-note" id="publishNote" hidden>✅ ¡Tu anuncio se ha publicado! Aparece arriba en la lista de propiedades.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">EG&nbsp;<strong>RENTA</strong></span>
+      <p>La plataforma de alquiler de Guinea Ecuatorial. Casas, apartamentos y oficinas en Malabo, Bata y todo el país.</p>
+      <p class="footer-flag">🇬🇶 Servicio disponible únicamente en Guinea Ecuatorial.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Ciudades</h4>
+        <a href="#listings">Malabo</a><a href="#listings">Bata</a><a href="#listings">Sipopo</a><a href="#listings">Mongomo</a>
+      </div>
+      <div>
+        <h4>EG RENTA</h4>
+        <a href="#buscar">Buscar</a><a href="#publicar">Publicar</a><a href="#zonas">Zonas</a><a href="#como">Cómo funciona</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© <span id="year"></span> EG RENTA · Unidad · Paz · Justicia · Hecho para Guinea Ecuatorial</div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" data-close aria-label="Cerrar">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
